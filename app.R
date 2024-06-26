@@ -7,6 +7,13 @@
 #    https://shiny.posit.co/
 #
 
+
+###### Adrian comments, June 26, 2024
+# Your app is great! It functions, it takes user input and appends it to text and plots!
+# Very well done. I think you have a good structure to create your apps further. 
+# I like the fact that you source your code from r script files and that you used
+# css customization. 
+
 r <- getOption("repos")
 r["CRAN"] <-"https://cloud.r-project.org/"
 options(repos=r)
@@ -140,7 +147,8 @@ server <- function(input, output) {
        
     })
  
-    
+### Adrian comments, 26 June, 2024
+# Nice! You found the way to write enhanced text for the app
     output$dynamicText <- renderUI({
       HTML(paste("Let's look at some descriptive statistics regarding the age distribution. The age group <b>",
                  input$ageg, "</b> has a sample size of <b>",nrow(tempdf()),"</b>."
